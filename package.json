@@ -1,8 +1,8 @@
 {
-  "name": "grunt-angular-toolbox",
-  "version": "0.0.12",
+  "name": "grunt-jquery-toolbox",
+  "version": "0.0.0",
   "description": "collection of grunt tasks and optional opinionated configuration",
-  "homepage": "https://github.com/Jimdo/grunt-angular-toolbox",
+  "homepage": "https://github.com/Jimdo/grunt-jquery-toolbox",
   "author": "Jimdo GmbH",
   "maintainers": [
     "Hannes Diercks <hannes.diercks@jimdo.com>",
@@ -12,7 +12,7 @@
   "contributors": [],
   "main": "lib/index.js",
   "keywords": [
-    "angular",
+    "jquery",
     "grunt",
     "helpers",
     "tdd",
@@ -20,7 +20,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Jimdo/grunt-angular-toolbox.git"
+    "url": "https://github.com/Jimdo/grunt-jquery-toolbox.git"
   },
   "scripts": {
     "test": "grunt test"
@@ -38,7 +38,6 @@
     "del": "^1.1.1",
     "findup-sync": "^0.2.1",
     "glob": "^4.4.0",
-    "grunt-angular-templates": "~0.5.7",
     "grunt-bump": "0.3.0",
     "grunt-concurrent": "^1.0.0",
     "grunt-contrib-concat": "~0.5.1",
@@ -50,13 +49,8 @@
     "grunt-coveralls": "^1.0.0",
     "grunt-istanbul": "^0.4.0",
     "grunt-karma": "~0.10.1",
-    "grunt-ng-annotate": "^0.10.0",
-    "grunt-protractor-coverage": "^0.2.13",
-    "grunt-protractor-runner": "^1.2.1",
-    "grunt-protractor-webdriver": "^0.2.0",
     "grunt-shell": "~1.1.1",
     "grunt-update-contributors": "0.0.1",
-    "jasmine-spec-reporter": "^2.1.0",
     "karma-chrome-launcher": "^0.1.7",
     "karma-coffee-preprocessor": "^0.2.1",
     "karma-coverage": "^0.2.7",
@@ -68,7 +62,6 @@
     "karma-script-launcher": "^0.1.0",
     "karma-spec-reporter": "0.0.16",
     "load-grunt-tasks": "^3.1.0",
-    "mkdirp": "^0.5.0",
-    "protractor": "^1.7.0"
+    "mkdirp": "^0.5.0"
   }
 }

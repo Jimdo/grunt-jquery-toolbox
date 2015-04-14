@@ -1,21 +1,18 @@
-grunt-angular-toolbox
+grunt-jquery-toolbox
 =====================
 
-[![Build Status](https://travis-ci.org/Jimdo/grunt-angular-toolbox.svg)](https://travis-ci.org/Jimdo/grunt-angular-toolbox)
-[![Dependency Status](https://david-dm.org/Jimdo/grunt-angular-toolbox.svg)](https://david-dm.org/Jimdo/grunt-angular-toolbox)
+[![Build Status](https://travis-ci.org/Jimdo/grunt-jquery-toolbox.svg)](https://travis-ci.org/Jimdo/grunt-jquery-toolbox)
+[![Dependency Status](https://david-dm.org/Jimdo/grunt-jquery-toolbox.svg)](https://david-dm.org/Jimdo/grunt-jquery-toolbox)
 
 Collection of grunt tasks and optional opinionated configuration
-for development of small and mid-sized angular modules.
-
-Like:
- - [angular-fontselect](https://github.com/Jimdo/angular-fontselect)
+for development of jquery plugins.
 
 
 Install
 -------
 
 ```sh
-npm install grunt-angular-toolbox --save-dev
+npm install grunt-jquery-toolbox --save-dev
 ```
 
 Use
@@ -28,13 +25,13 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    'angular-toolbox': { /* see config */ }
+    'jquery-toolbox': { /* see config */ }
     /* project specific configuration here */
   });
 
-  /* load angular-toolbox collection 
+  /* load jquery-toolbox collection
      see Included 3rd party tasks */
-  grunt.loadNpmTasks('grunt-angular-toolbox');
+  grunt.loadNpmTasks('grunt-jquery-toolbox');
 
   /* custom tasks and hooks */
   grunt.registerTask('default', ['test']);
@@ -54,47 +51,43 @@ in the project.
 ```sh
 #see this list by using
 grunt --help
-``` 
+```
 
-### $ `grunt test[:(unit|e2e)]`
+### $ `grunt test`
 
 Run the tests.
 
-__Environment Variables__:  
- - `E2E_SANDBOX_PORT` change port (default: 8765)
+__Environment Variables__:
  - `KARMA_BROWSERS` overwrite browsers for unit tests (default: PhantomJs,Chrome,Firefox)
  - `KARMA_REPORTERS` overwrite reporters for unit tests (default: progress)
- - `PROTRACTOR_BROWSERS` overwrite browsers for unit tests (default: Chrome)
- - `PROTRACTOR_REPORTERS` overwrite reporters for unit tests (default: dots)
 
-__Options__:  
+__Options__:
  - `--browsers` change browsers for current suite(s)
  - `--reporters` change reporters for current suite(s)
  - `--no-coverage` disable coverage reports and instrumentation (useful for debugging)
  - `--no-jshint` disable jshint (useful for debugging)
 
-### $ `grunt tdd[:(unit|e2e)]`
+### $ `grunt tdd`
 Run the tests and rerun on src changes
 
 Same __Environment Variables__ and __Options__ as the test task.
 
-### $ `grunt demo[:e2e]`
-Serve demo or e2e standbox application
+### $ `grunt demo`
+Serve demo application
 
-__Environment Variables__:  
+__Environment Variables__:
  - `DEMO_PORT` change port (default: 8000)
- - `E2E_SANDBOX_PORT` change port (default: 8765)
 
-__Options__:  
+__Options__:
  - `--port` change port of current task
 
 ### $ `grunt coverage`
 Serve coverage report, requires `grunt test:unit` to have been run once.
 
-__Environment Variables__:  
+__Environment Variables__:
  - `COVERAGE_PORT` change port (default: 7000)
 
-__Options__:  
+__Options__:
  - `--port` change port
 
 ### $ `grunt coveralls`
@@ -117,17 +110,11 @@ Default project structure
  ├ src/
  │ ├ js/
  │ │ ├ *.js (project related js files)
- │ │ └ helper.module.js (initiator of angular module)
  │ ├ less/
  │ │ └ *.less (project related less files)
  │ └ partials/
  │   └ *.html (views for directives)
  ├ test/
- │ ├ e2e/
- │ │ ├ env/
- │ │ │ └ index.html
- │ │ ├ SpecHelper.js|coffee (test setup stuff)
- │ │ └ *Spec.js|coffee (end to end test files)
  │ └ unit/
  │   ├ SpecHelper.js|coffee (test setup stuff)
  │   └ *Spec.js|coffee (unit test files)
@@ -143,7 +130,7 @@ This is customizable via the [config](#config)
 Config
 ------
 
-Values are defaults or explanations. 
+Values are defaults or explanations.
 
 ```js
 // Gruntfile.js
@@ -151,24 +138,23 @@ module.exports = function(grunt) {
   'use strict';
 
   grunt.initConfig({
-    'angular-toolbox': {
-        /* specify the preconfigured tasks that 
+    'jquery-toolbox': {
+        /* specify the preconfigured tasks that
          should be used in the project */
       tasks: [
         'build',
         'coverage',
         'coveralls',
         'demo',
-        'demo:e2e',
         'release',
         'tdd',
         'test'
       ],
-      
+
       // whether or not the author in package.json should be set to the
       // contributor with the most commits
       dynamicAuthor: false,
-      
+
       // customize the demo/test environment files
       envFilter: function(env) { return env; },
 
@@ -176,20 +162,18 @@ module.exports = function(grunt) {
       files: {
         src: {
           js: [
-            'src/js/helper.module.js',
-            'src/js/**/!(helper)*.js'
+            'src/js/helper.module.js'
           ],
           less: [
             'src/less/**/*.less'
-          ],
-          partialsFolder: 'src/partials/'
+          ]
         },
-        // additional vendor files for tests and demos that 
+        // additional vendor files for tests and demos that
         // won't be shipped within dist
         vendor: {
           js: {
             top: [],
-            angularModules: [],
+            jqueryPlugins: [],
             bottom: []
           },
           css: [],
@@ -198,14 +182,9 @@ module.exports = function(grunt) {
           unit: [
             'test/unit/SpecHelper.+(js|coffee)',
             'test/unit/**/*Spec.+(js|coffee)'
-          ],
-          e2e: [
-            'test/e2e/SpecHelper.+(js|coffee)',
-            'test/e2e/**/*Spec.+(js|coffee)'
           ]
         },
         demoEnvFolder: 'demo/',
-        e2eEnvFolder: 'test/e2e/env/',
         distFolder: 'dist/'
       },
 
@@ -215,15 +194,11 @@ module.exports = function(grunt) {
       // how much commits make a maintainer?
       maintainersThreshold: 15,
 
-      // custom middleware for e2e or demo server
+      // custom middleware for demo server
       // can also be an array of middleware
       middleware: {
-        e2e: function(req, res, next) { next(); },
         demo: function(req, res, next) { next(); }
       },
-
-      // the angular module name in case it differs from project name 
-      moduleName: '"name" from package.json',
 
       // banners an wraps for generated dist files (can be paths or strings)
       templates: {
@@ -271,15 +246,11 @@ module.exports = function(grunt) {
 
  - test:before
  - test:unit:before
- - test:e2e:before
  - test:after
  - test:unit:after
- - test:e2e:after
  - tdd:before
  - tdd:unit:before
- - tdd:e2e:before
  - demo:before
- - demo:e2e:before
  - coverage:before
  - build:before
  - build:after
@@ -290,7 +261,6 @@ module.exports = function(grunt) {
 Included 3rd party tasks
 ------------------------
 
- - [grunt-angular-templates](https://github.com/ericclemmons/grunt-angular-templates)
  - [grunt-bump](https://github.com/vojtajina/grunt-bump)
  - [grunt-concurrent](https://github.com/sindresorhus/grunt-concurrent)
  - [grunt-contrib-concat](https://github.com/gruntjs/grunt-contrib-concat)
@@ -302,10 +272,7 @@ Included 3rd party tasks
  - [grunt-coveralls](https://github.com/pimterry/grunt-coveralls)
  - [grunt-istanbul](https://github.com/taichi/grunt-istanbul)
  - [grunt-karma](https://github.com/karma-runner/grunt-karma)
- - [grunt-ng-annotate](https://github.com/mzgol/grunt-ng-annotate)
  - [grunt-npm](https://github.com/Xiphe/grunt-npm/)
- - [grunt-protractor-coverage](https://github.com/r3b/grunt-protractor-coverage)
- - [grunt-protractor-webdriver](https://github.com/seckardt/grunt-protractor-webdriver)
  - [grunt-shell](https://github.com/sindresorhus/grunt-shell)
 
 
@@ -313,19 +280,19 @@ LICENSE
 -------
 
 > The MIT License
-> 
+>
 > Copyright (c) 2014 Jimdo GmbH http://jimdo.com
-> 
+>
 > Permission is hereby granted, free of charge, to any person obtaining a copy
 > of this software and associated documentation files (the "Software"), to deal
 > in the Software without restriction, including without limitation the rights
 > to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 > copies of the Software, and to permit persons to whom the Software is
 > furnished to do so, subject to the following conditions:
-> 
+>
 > The above copyright notice and this permission notice shall be included in
 > all copies or substantial portions of the Software.
-> 
+>
 > THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 > IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 > FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE

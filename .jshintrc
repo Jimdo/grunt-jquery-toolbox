@@ -50,7 +50,7 @@
     "couch"         : false,
     "devel"         : false,
     "dojo"          : false,
-    "jquery"        : false,
+    "jquery"        : true,
     "mootools"      : false,
     "node"          : false,
     "nonstandard"   : false,
@@ -64,7 +64,6 @@
     "passfail"      : false,
     "white"         : false,
     "predef"        : [
-        "angular",
         "jasmine",
         "beforeEach",
         "afterEach",
@@ -73,13 +72,6 @@
         "it",
         "xit",
         "expect",
-        "spyOn",
-        "inject",
-        "module",
-        "exports",
-        "require",
-        "process",
-        "element",
-        "by"
+        "spyOn"
     ]
 }

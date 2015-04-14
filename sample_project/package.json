@@ -1,7 +1,7 @@
 {
-  "name": "grunt-angular-toolbox-sample",
+  "name": "grunt-jquery-toolbox-sample",
   "version": "0.0.0",
-  "description": "sample project for grunt-angular-toolbox",
-  "homepage": "https://github.com/Jimdo/grunt-angular-toolbox/tree/master/sample_project",
+  "description": "sample project for grunt-jquery-toolbox",
+  "homepage": "https://github.com/Jimdo/grunt-jquery-toolbox/tree/master/sample_project",
   "license": "MIT"
 }

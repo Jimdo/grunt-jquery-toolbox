@@ -1,5 +1,5 @@
 {
-  "name": "grunt-angular-toolbox",
+  "name": "grunt-jquery-toolbox",
   "version": "0.0.0",
   "authors": [
     "Hannes Diercks <hannes.diercks@jimdo.com>",
@@ -8,7 +8,7 @@
   ],
   "description": "collection of grunt tasks and optional opinionated configuration",
   "keywords": [
-    "angular",
+    "jquery",
     "grunt",
     "helpers",
     "tdd",
@@ -17,8 +17,9 @@
   "license": "MIT",
   "private": true,
   "devDependencies": {
-    "angular": "~1.2.21",
-    "angular-mocks": "~1.2.21",
     "jasmine-moar-matchers": "~0.0.2"
+  },
+  "dependencies": {
+    "jquery": "~2.1.3"
   }
 }

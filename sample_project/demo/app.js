@@ -1,1 +1,1 @@
-angular.bootstrap(document, ['grunt-angular-toolbox-sample']);
+// bootstrap things here

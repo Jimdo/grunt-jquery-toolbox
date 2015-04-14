@@ -7,7 +7,6 @@ node_js:
 
 env:
   global:
-  - PROTRACTOR_BROWSERS=firefox
   - KARMA_BROWSERS=Firefox,PhantomJS
 
 install:
