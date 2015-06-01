@@ -12,6 +12,7 @@ Install
 -------
 
 ```sh
+npm install grunt grunt-cli --save-dev
 npm install grunt-jquery-toolbox --save-dev
 ```
 
@@ -25,7 +26,7 @@ module.exports = function(grunt) {
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
-    'jquery-toolbox': { /* see config */ }
+    jqueryToolbox: { /* see config */ }
     /* project specific configuration here */
   });
 
@@ -66,11 +67,7 @@ __Options__:
  - `--reporters` change reporters for current suite(s)
  - `--no-coverage` disable coverage reports and instrumentation (useful for debugging)
  - `--no-jshint` disable jshint (useful for debugging)
-
-### $ `grunt tdd`
-Run the tests and rerun on src changes
-
-Same __Environment Variables__ and __Options__ as the test task.
+ - `--watch` tdd style
 
 ### $ `grunt demo`
 Serve demo application
@@ -90,14 +87,11 @@ __Environment Variables__:
 __Options__:
  - `--port` change port
 
-### $ `grunt coveralls`
-Send coverage report to coveralls, requires `grunt test:unit` to have been run once.
-
 ### $ `grunt build[:watch]`
 Concatenate, annotate and minify JavaScript and less files
 Optionally watch the `src` files and rebuild on change
 
-### $ `grunt release`
+### $ `grunt release[:level]`
 Run tests, (if successful) bump version build project, commit changes and push to origin
 
 
@@ -139,7 +133,7 @@ module.exports = function(grunt) {
   'use strict';
 
   grunt.initConfig({
-    'jquery-toolbox': {
+    jqueryToolbox: {
         /* specify the preconfigured tasks that
          should be used in the project */
       tasks: [
