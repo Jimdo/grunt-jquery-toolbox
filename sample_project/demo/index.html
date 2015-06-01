@@ -4,11 +4,22 @@
   <meta charset="utf-8">
   <title>My jQuery Plugin demo</title>
   <link rel="stylesheet" type="text/css" href="demo/style.css" />
-  <!-- [[src/less]] -->
+  <!-- bower:css -->
+  <!-- endbower -->
+  <!-- injector:scss -->
+  <!-- endinjector -->
+  <!-- injector:less -->
+  <link rel="stylesheet" href="/src/less/style.css">
+  <!-- endinjector -->
 </head>
 <body>
   <h1>Hase</h1>
-  <!-- [[src/js]] -->
+  <!-- bower:js -->
+  <script src="../bower_components/jquery/dist/jquery.js"></script>
+  <!-- endbower -->
+  <!-- injector:js -->
+  <script src="/src/js/myPlugin.js"></script>
+  <!-- endinjector -->
   <script type="text/javascript" src="demo/app.js"></script>
 </body>
 </html>

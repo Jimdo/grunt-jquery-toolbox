@@ -7,11 +7,11 @@
  * Copyright 2015, 
  * Released under the MIT license
  */
-(function(jQuery, undefined) {
+(function(angular, undefined) {
   'use strict';
 
   // src/js/myPlugin.js
   $.fn.myPlugin = function() {
 
   };
-})(window.jQuery);
+})(window.angular);

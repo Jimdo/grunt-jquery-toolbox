@@ -2,7 +2,7 @@ module.exports = (grunt) ->
 
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json')
-    'jquery-toolbox': {}
+    jqueryToolbox: {}
   });
 
-  require('../tasks/collection');
+  require('../tasks/init');
