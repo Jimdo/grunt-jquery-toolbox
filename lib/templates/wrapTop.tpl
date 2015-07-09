@@ -1,3 +1,4 @@
-(function(angular, undefined) {
+(function(jQuery, undefined) {
   'use strict';
 
+  var $ = jQuery;

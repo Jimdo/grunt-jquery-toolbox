@@ -1,2 +1,2 @@
 
-})(window.angular);
+})(typeof require === 'function' ? require('jquery') : window.jQuery);
