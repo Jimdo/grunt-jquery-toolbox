@@ -1,6 +1,6 @@
 {
   "name": "grunt-jquery-toolbox",
-  "version": "0.1.7",
+  "version": "0.1.8",
   "description": "collection of grunt tasks and optional opinionated configuration",
   "homepage": "https://github.com/Jimdo/grunt-jquery-toolbox",
   "author": "Jimdo GmbH",
