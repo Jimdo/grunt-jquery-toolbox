@@ -196,7 +196,7 @@ module.exports = function(grunt) {
       },
 
       // banners an wraps for generated dist files (can be paths or strings)
-      templates: {
+      template: {
         banner: 'lib/templates/banner.tpl',
         bannerMin: 'lib/templates/bannerMin.tpl',
         wrapTop: 'lib/templates/wrapTop.tpl',
