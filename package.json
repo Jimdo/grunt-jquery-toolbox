@@ -69,7 +69,7 @@
     "karma-phantomjs-launcher": "^0.2.0",
     "karma-requirejs": "^0.2.2",
     "karma-script-launcher": "^0.1.0",
-    "karma-spec-reporter": "0.0.20",
+    "karma-spec-reporter": "0.0.23",
     "mkdirp": "^0.5.1",
     "node-sass-middleware": "^0.9.0",
     "wiredep": "^3.0.0-beta"
