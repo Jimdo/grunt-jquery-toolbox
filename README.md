@@ -73,19 +73,23 @@ __Options__:
 Serve demo application
 
 __Environment Variables__:
- - `DEMO_PORT` change port (default: 8000)
+ - `DEMO_PORT` change port                  (default: 8000)
+ - `LIVERELOAD_PORT` change livereload port (default: 35729)
 
 __Options__:
  - `--port` change port of current task
+ - `--livereload-port` change livereload port
 
 ### $ `grunt coverage`
 Serve coverage report, requires `grunt test:unit` to have been run once.
 
 __Environment Variables__:
- - `COVERAGE_PORT` change port (default: 7000)
+ - `COVERAGE_PORT` change port              (default: 7000)
+ - `LIVERELOAD_PORT` change livereload port (default: 35729)
 
 __Options__:
  - `--port` change port
+ - `--livereload-port` change livereload port
 
 ### $ `grunt build[:watch]`
 Concatenate, annotate and minify JavaScript and less files
