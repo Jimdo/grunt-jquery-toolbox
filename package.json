@@ -64,7 +64,7 @@
     "grunt-update-contributors": "0.0.1",
     "grunt-wiredep": "^2.0.0",
     "jasmine-core": "^2.4.1",
-    "karma": "^0.13.16",
+    "karma": "^0.13.19",
     "karma-chrome-launcher": "^0.2.0",
     "karma-coffee-preprocessor": "^0.3.0",
     "karma-coverage": "^0.5.3",
