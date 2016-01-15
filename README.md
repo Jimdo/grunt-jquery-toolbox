@@ -1,7 +1,7 @@
 grunt-jquery-toolbox
 =====================
 
-[![Build Status](https://travis-ci.org/Jimdo/grunt-jquery-toolbox.svg)](https://travis-ci.org/Jimdo/grunt-jquery-toolbox)
+[![Build Status](https://travis-ci.org/Jimdo/grunt-jquery-toolbox.svg?branch=master)](https://travis-ci.org/Jimdo/grunt-jquery-toolbox)
 [![Dependency Status](https://david-dm.org/Jimdo/grunt-jquery-toolbox.svg)](https://david-dm.org/Jimdo/grunt-jquery-toolbox)
 
 Collection of grunt tasks and optional opinionated configuration
