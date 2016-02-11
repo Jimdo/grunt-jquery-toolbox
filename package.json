@@ -42,7 +42,7 @@
     "del": "^2.0.2",
     "express-autoprefixer": "^4.0.3",
     "findup-sync": "^0.3.0",
-    "glob": "^6.0.3",
+    "glob": "^7.0.0",
     "grunt-autoprefixer": "^3.0.3",
     "grunt-bump": "0.7.0",
     "grunt-concurrent": "^2.0.0",
