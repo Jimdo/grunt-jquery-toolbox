@@ -58,7 +58,7 @@
     "grunt-jscs": "^2.7.0",
     "grunt-karma": "~0.12.1",
     "grunt-sass": "^1.1.0",
-    "grunt-shell": "~1.1.2",
+    "grunt-shell": "~1.2.0",
     "grunt-thrall": "0.0.4",
     "grunt-update-contributors": "0.0.1",
     "grunt-wiredep": "^2.0.0",
