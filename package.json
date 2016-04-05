@@ -61,7 +61,7 @@
     "grunt-shell": "~1.2.1",
     "grunt-thrall": "0.0.4",
     "grunt-update-contributors": "0.0.1",
-    "grunt-wiredep": "^2.0.0",
+    "grunt-wiredep": "^3.0.0",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
     "karma-chrome-launcher": "^0.2.2",
