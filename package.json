@@ -64,7 +64,7 @@
     "grunt-wiredep": "^3.0.0",
     "jasmine-core": "^2.4.1",
     "karma": "^0.13.22",
-    "karma-chrome-launcher": "^0.2.2",
+    "karma-chrome-launcher": "^1.0.1",
     "karma-coffee-preprocessor": "^1.0.0",
     "karma-coverage": "^1.0.0",
     "karma-firefox-launcher": "^1.0.0",
