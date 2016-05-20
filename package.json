@@ -76,7 +76,7 @@
     "node-sass-middleware": "^0.9.7",
     "phantomjs-prebuilt": "^2.1.6",
     "postcss": "^5.0.19",
-    "postcss-middleware": "^1.0.0",
+    "postcss-middleware": "^1.1.1",
     "requirejs": "^2.2.0",
     "wiredep": "^4.0.0"
   }
