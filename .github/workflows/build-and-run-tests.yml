@@ -6,7 +6,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       PROTRACTOR_BROWSERS: firefox
-      KARMA_BROWSERS: PhantomJS,Firefox
+      KARMA_BROWSERS: Firefox
       DISPLAY: :99.0
     name: Build and run action on on NodeJs 10
     steps:

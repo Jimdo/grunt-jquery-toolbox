@@ -59,7 +59,7 @@ grunt --help
 Run the tests.
 
 __Environment Variables__:
- - `KARMA_BROWSERS` overwrite browsers for unit tests (default: PhantomJs,Chrome,Firefox)
+ - `KARMA_BROWSERS` overwrite browsers for unit tests (default: Chrome,Firefox)
  - `KARMA_REPORTERS` overwrite reporters for unit tests (default: progress)
 
 __Options__:
